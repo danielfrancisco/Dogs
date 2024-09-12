@@ -32,6 +32,7 @@ export default function Home() {
   },[])
 
   useEffect(() => {
+    
     const timer = setTimeout(() => {
       localStorage.clear();
       console.log('localStorage has been cleared.');

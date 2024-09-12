@@ -46,13 +46,14 @@ export default function breedImages(){
       const breed = segments[breedIndex];
       
       let newFavorite = {image: image, breedName: breed}
-
-      
+     
       const favoritesString = localStorage.getItem('favorites');
       const existingArray = favoritesString ? JSON.parse(favoritesString) : [];
       
-       if(existingArray.length>0){
-         if(existingArray.some((item:any) => item.breedName !== newFavorite.breedName )){
+      if(existingArray.length>0){
+         if(existingArray.some((item:any) => {if(item.image === newFavorite.image){
+          return true
+         }} )===false){
           existingArray.push(newFavorite);  
          }
        }else{
