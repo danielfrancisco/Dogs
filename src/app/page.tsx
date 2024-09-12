@@ -8,7 +8,7 @@ export default function Home() {
  const[breed, setBreed] = useState< string[]>([])
  
  useEffect(()=>{
-    try{
+  try{
       fetch('https://dog.ceo/api/breeds/list/all')
       .then(res=>{
         if(res.ok){
@@ -30,6 +30,15 @@ export default function Home() {
       console.log(error.message)
     }
   },[])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      localStorage.clear();
+      console.log('localStorage has been cleared.');
+    }, 600000); 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   function seeBreed(e: React.MouseEvent<HTMLDivElement>){
     let breed: any = e.currentTarget.textContent
