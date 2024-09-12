@@ -1,0 +1,23 @@
+
+p{
+    font-size: 16;
+    text-transform: uppercase;
+    margin-top: 20px;
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 300px;
+    border-radius: 6px;
+}
+
+div{
+    text-align: center;
+}

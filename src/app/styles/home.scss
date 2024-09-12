@@ -1,0 +1,25 @@
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    color: black;
+    &:hover{
+        cursor: pointer;
+        
+    }
+
+    
+}
+
+div{
+    text-align: center;
+    
+}
+

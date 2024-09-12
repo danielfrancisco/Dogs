@@ -1,0 +1,20 @@
+.in{
+    height: 28px;
+    width: 140px;
+    border: solid thin black;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+    left: 40vw;
+}
+
+
+.greet{
+    
+}
+
+.va{
+    position: relative;
+    left: 40vw;
+    color: red;
+}
