@@ -67,6 +67,7 @@ export default function breedImages(){
 
     return(
         <>
+        <h1>Images</h1>
         <div>
         {images.map((image:string ,index:number)=>{
              return <div key={index}>

@@ -49,7 +49,7 @@ export default function Home() {
 
  return (
     <>
-    
+     <h1>List of breeds</h1>
      <div>{breed.map((val:string, index: number)=>
      <Link href="/breedImages" key={index}>
       <p key={index}  onClick={(e)=>seeBreed(e)}>{val}</p>

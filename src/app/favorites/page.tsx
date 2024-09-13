@@ -24,6 +24,7 @@ export default function(){
 
     return(
         <>
+        <h1>Favorites</h1>
         <div>
             {favoritesContainer.map((data: any,index:number)=>{
                if(selected===''){
