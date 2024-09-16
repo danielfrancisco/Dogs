@@ -8,8 +8,7 @@ export default function Home() {
  const[breed, setBreed] = useState< string[]>([])
  
  useEffect(()=>{
-  try{
-      fetch('https://dog.ceo/api/breeds/list/all')
+  fetch('https://dog.ceo/api/breeds/list/all')
       .then(res=>{
         if(res.ok){
           return res.json()
@@ -25,10 +24,10 @@ export default function Home() {
             setBreed((breed: string[])=>[...breed, i])
           }
         }
+      }).catch((error:any)=>{
+        console.log(error)
       })
-    }catch(error:any){
-      console.log(error.message)
-    }
+    
   },[])
 
   useEffect(() => {

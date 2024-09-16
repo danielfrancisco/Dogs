@@ -19,8 +19,7 @@ export default function breedImages(){
     },[])
 
     function getData(breed:string){
-      try{
-        fetch(`https://dog.ceo/api/breed/${breed}/images`)
+      fetch(`https://dog.ceo/api/breed/${breed}/images`)
         .then(res=>{
           if(res.ok){
             return res.json()
@@ -30,14 +29,13 @@ export default function breedImages(){
           for(let i in data.message){
             setImages((images: string[])=>[...images, data.message[i]])
           }
+        }).catch((error:any)=>{
+          console.log(error)
         })
-      }catch(error:any){
-        console.log(error)
-      }
+      
     }
 
     function addFavorite(image:string){
-      
       const url = new URL(image);
       const pathname = url.pathname;
 
